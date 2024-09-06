@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-picker</title>
+    <style>
+      body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#color-box {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+#color-picker {
+    max-width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <input type="color" id="color-picker">
+        <div id="color-box"></div>
+    </div>
+    <script>
+        document.getElementById('color-picker').addEventListener('input', function () {
+            document.getElementById('color-box').style.backgroundColor = this.value;
+        });
+
+    </script>
+</body>
+
+</html>
